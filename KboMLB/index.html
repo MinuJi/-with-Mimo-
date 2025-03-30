@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구속변환</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+   <body>
+    <h1>구속 변환기</h1> <br>
+    <h3>밑에 사진들을 눌러보세요</h3>
+    <div class="baseball">
+     <p class="Kbo"> <a href="https://www.koreabaseball.com/">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtSgZPNk_cySAp8C_gRt9bXq-2dZYiFxVNQA&s"> </a></p>
+     <p class="Mlb"> <a href="https://www.mlb.com/"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT2emxRE_8zLuRxiRcEFeEuaOonzpQNXxFrw&s"> </a></p>
+     </div>
+     <p>KBO는 공의 구속을 km를 쓰고 MLB는 mile을 써요</p> <br>
+    
+    <div class="quiz">
+    <p>100마일이 과연 몇km일까요?</p>
+    <input type="text" id="userAnswer" placeholder="여기에 입력하세요">
+    <button class="go-btn" onclick="checkAnswer()">입력</button>
+    <p id="result"></p></div> <br>
+
+     <p>그럼 구속변환기를 한번 이용해보세요!</p> <br>
+
+     <button class="go-btn" onclick="nextPage()">이용하러가기</button>
+   
+      <script src="script.js"></script> 
+      <script src="translate.js"></script>
+      </body>
+  </html>

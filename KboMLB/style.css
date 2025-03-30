@@ -1,0 +1,160 @@
+ /* 전체 배경 스타일 */
+ body {
+    background-color: #87ceeb;  /* 생기 있는 스카이블루 */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;                /* 진한 글씨로 대비 */
+    line-height: 1.6;
+  }
+  
+  p {
+    text-align: center;          /* 텍스트 가운데 정렬 */
+    font-size: 18px;             /* 글자 크기 적당히 키우기 */
+    font-weight: bold; 
+    margin: 20px auto;           /* 위아래 간격 + 가운데 정렬 */
+    color: #333;                 /* 글자 색 */
+    line-height: 1.6;            /* 줄 간격 */
+    width: fit-content;          /* 텍스트 너비만큼 */
+    padding: 10px 20px;          /* 안쪽 여백 */
+    background-color: #f0f8ff;   /* 살짝 옅은 배경 */
+    border-radius: 8px;          /* 둥근 테두리 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 그림자 */
+  }
+  
+  
+  .baseball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;                     /* 안쪽 여백 */
+    border-radius: 10px;
+    background-color: lightblue;
+    border: 3px solid #4682b4;
+    margin: 20px auto;                 /* 화면 가운데 정렬 */
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 살짝 그림자 */
+  }
+  
+  /* 이미지 스타일 */
+  .baseball img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;              /* 이미지도 살짝 둥글게 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .baseball img:hover {
+    transform: scale(1.05);          /* 살짝 커지는 효과 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+    .quiz {
+    display: flex;
+    flex-direction: column;        /* 세로 정렬 */
+    justify-content: center;       /* 수직 방향 정렬 */
+    align-items: center;           /* 가로 방향 정렬 (가운데) */
+    gap: 20px;                     /* 요소 간 간격 */
+    padding: 30px;                 /* 안쪽 여백 */
+    border-radius: 10px;           /* 둥근 모서리 */
+    background-color: lightblue;   /* 배경색 */
+    border: 3px solid #4682b4;        /* 회색 테두리 */
+    width: fit-content;            /* 내용 크기만큼 박스 크기 */
+    margin: 30px auto;             /* 화면 중앙 정렬 */
+  }
+  
+  .go-btn {
+    display: block;               /* 가운데 정렬 위해 block */
+    margin: 30px auto;            /* 가운데 + 위아래 여백 */
+    padding: 12px 24px;           /* 버튼 크기 */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;    /* 예쁜 파란색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .go-btn:hover {
+    background-color: #0056b3;    /* 호버 시 색 변경 */
+    transform: scale(1.05);       /* 살짝 커지는 애니메이션 */
+  }
+  
+  
+    .baseball img {
+      width: 300px;
+      height: 200px;
+    }  
+  
+   h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #1565c0;               /* 진한 하늘색 포인트 */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* 살짝 그림자 */
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 20px;
+    color: #333;                  /* 안정적인 기본 텍스트 컬러 */
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  
+    /* 입력 그룹 스타일 */
+  /* 입력 그룹 스타일 - 연한 하늘색 테마 */
+  .form-group {
+    border: 3px solid #4a90e2;             /* 선명한 하늘색 테두리 */
+    border-radius: 15px;
+    padding: 25px 40px;
+    background-color: #e3f2fd;             /* 밝고 연한 하늘색 배경 */
+    width: fit-content;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+  }
+  
+  /* 라벨 스타일 */
+  label {
+    font-weight: bold;
+    color: black;                        /* 진한 하늘색/파랑 포인트 */
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  
+  
+  /* 반응형 스타일 (작은 화면에서도 잘 보이게) */
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .form-group {
+      padding: 15px 25px;
+    }
+    
+    input, select {
+      width: 180px;
+      font-size: 14px;
+    }
+  
+    #result {
+      font-size: 16px;
+      padding: 10px 30px;
+    }
+  }

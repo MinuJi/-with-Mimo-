@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구속변환기</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+  <form>
+    <h1>구속 변환기</h1>
+
+      <div class="form-group">
+        <label for="enterNumber">숫자 입력:</label>
+        <input type="number" id="enterNumber" placeholder="구속을 입력하세요">
+
+        <label for="nowNumber">현재 구속 단위를 선택하세요:</label>
+        <select id="nowNumber">
+          <option value="miles">miles</option>
+          <option value="km">km</option>
+        </select>
+
+        <label for="wantNumber">바꾸고 싶은 구속 단위를 선택하세요:</label>
+        <select id="wantNumber">
+          <option value="miles">miles</option>
+          <option value="km">km</option>
+        </select>
+      </div>
+         </form>
+           <p>아래 버튼을 눌러주세요!</p> <br>
+        <button class="go-btn" onclick="change()">click</button> <br>
+   
+       <p id="result">누르면 잠시후 결과가 나옵니다.</p> <br>
+    
+    <button class="go-btn" onclick="goBack()">다시 돌아가기</button>
+    <script src="translate.js"></script>
+  </body>
+</html>
