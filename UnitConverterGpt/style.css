@@ -1,0 +1,53 @@
+h2 {
+    color: rgb(109, 12, 148);
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #bdb9f5;
+  }
+  
+  label {
+    color: #211C84;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    border: 3px solid #211C84;
+    border-radius: 15px;
+    padding: 5px 100px 5px 100px;
+    background-color: #B5A8D5;
+  
+    width: fit-content; /* 내용 크기만큼 너비 조정 */
+    margin: 0 auto; /* 자동 가운데 정렬 */
+    display: block;
+  }
+  
+  
+  p {
+    border: 3px solid;
+    border-radius: 8px;
+    text-align: center;
+    background-color: lightcoral;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 100px 5px 100px;
+  
+    width: fit-content; /* 내용 크기만큼 너비 조정 */
+    display: block;
+    margin: 0 auto;
+  
+  }
+  
+  button {
+    border: 10px solid;
+    border-radius: 50px;
+    width:100px;
+    height:100px;
+    background-color: red;
+  
+     display: block;
+    margin: 0 auto;
+  }
