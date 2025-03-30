@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardpack Open</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Cardpack Open</h1>
+    <h2>개봉을 눌러보세요</h2>
+
+    <div class="cardpacklist">
+      <div class="cardpack">
+        <img class="firstCard" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtTEgit69CLM0EzgmkkxxDZ8UE7vbfpG9HTw&s">
+        <div class="doublebutton">
+          <button onclick="firstPack()">개봉</button>
+          <button onclick="firstBack()">나가기</button>
+        </div>
+        <p class="playerName"></p>
+      </div>
+    </div>
+
+  <p>미니 게임 한번해볼래요?</p>
+
+<div class="checkbox-container">
+<label><input type="checkbox" id="yesCheckbox" onclick="toggleCheckbox('yes')"> 네</label>
+<label><input type="checkbox" id="noCheckbox" onclick="toggleCheckbox('no')"> 아니요</label>
+</div>
+
+<p id="checkboxResult"></p>
+
+  <div class="containButton">
+    <button onclick="gogo()">다음</button>
+    <button onclick="goBack()">다시 돌아가기</button>
+  </div>
+    <script src="open.js"></script>
+  </body>
+</html>

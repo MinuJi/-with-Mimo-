@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Mini Game</h1>
+
+    <p>How many players?</p>
+    <select id="playerCount" onchange="showNameInputs()">
+  <option value="1">1person</option>
+  <option value="2">2person</option>
+  <option value="3">3person</option>
+  <option value="4">4person</option>
+</select>
+
+    <!-- 이름 입력창이 자동 생성될 부분 -->
+    <div id="nameInputs"></div>
+    
+    <p>How many want time?</p>
+    <select id="gameCount">
+      <option>1games</option>
+      <option>3games</option>
+      <option>5games</option>
+      <option>7games</option>
+    </select>
+
+    <button onclick="startGame()">Start Game</button>
+
+
+     <div id="gameArea" style="display:none;">
+        <h3 id="currentPlayer"></h3>
+        <div class="cardpacklist">
+            <div class="cardpack">
+                <img class="firstCard" id="playerCard" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtTEgit69CLM0EzgmkkxxDZ8UE7vbfpG9HTw&s">
+                <div class="doublebutton">
+                    <button onclick="drawCard()">개봉</button>
+                </div>
+                <p class="playerName" id="playerOVR"></p>
+            </div>
+        </div>
+        <button onclick="nextTurn()">Next Player</button>
+        <button id="showResultBtn" onclick="determineWinner()" style="display:none;">결과 보기</button>
+    </div>
+
+    <h2 id="result" style="display:none;"></h2>
+
+    <button onclick="goBack()">다시 돌아가기</button>
+
+    <script src="next.js"></script>
+  </body>
+</html>
