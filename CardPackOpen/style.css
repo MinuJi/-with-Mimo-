@@ -1,0 +1,96 @@
+h1 {
+    text-align: center;
+    color:#211C84;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4D55CC;
+  }
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #211C84;
+  }
+  
+  h4 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4D55CC;
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  body {
+    background-color:#F7A8C4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 30px;
+    color:#211C84;
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .whatCard {
+    text-align: center; /* 내부 요소(이미지, 버튼, 텍스트) 가운데 정렬 */
+    margin: 0 auto; /* 전체 블록을 가운데 정렬 */
+    display: block;
+    width: fit-content; /* 내용 크기만큼 너비 설정 */
+  }
+  
+  .cardpacklist {
+    display: flex;  
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 100%;
+     flex-wrap: nowrap; /* 📌 모바일에서도 가로 정렬 유지 */
+    overflow-x: auto; /* 📌 화면이 작을 경우 스크롤 허용 */
+    padding-bottom: 10px; /* 스크롤 아래 여백 추가 */
+  }
+  
+  
+  button {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  
+  .doublebutton {
+    display: flex;
+    justify-content: center;  
+    margin-top: 10px;
+  }
+  
+  .cardpack img {
+    width: 200px; 
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .cardpack p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px; 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cardpacklist {
+      justify-content: flex-start; /* 📌 카드 정렬 방식 유지 */
+      overflow-x: auto; /* 가로 스크롤 허용 */
+      padding: 10px;
+    }
+  
+    .cardpack {
+      flex: 0 0 auto; /* 크기 변형 방지 */
+    }
+  }
