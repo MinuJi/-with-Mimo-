@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단위 변환기 만들기</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>단위 변환기</h2>
+
+    <form>
+      <div class="form-group">
+        <label for="enterNumber">숫자 입력:</label>
+        <input type="number" id="enterNumber" placeholder="숫자를 입력하세요">
+
+        <label for="nowNumber">현재 단위를 선택하세요:</label>
+        <select id="nowNumber">
+          <option value="mm">mm</option>
+          <option value="cm">cm</option>
+          <option value="m">m</option>
+          <option value="km">km</option>
+        </select>
+
+        <label for="wantNumber">바꾸고 싶은 단위를 선택하세요:</label>
+        <select id="wantNumber">
+          <option value="mm">mm</option>
+          <option value="cm">cm</option>
+          <option value="m">m</option>
+          <option value="km">km</option>
+        </select>
+      </div>
+    </form>
+
+    <p id="result">변환 결과가 여기에 표시됩니다.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

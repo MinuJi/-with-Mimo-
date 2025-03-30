@@ -1,0 +1,100 @@
+/* 전체 배경 스타일 */
+body {
+    background-color: #f8f1e4; /* 기존 antiquewhite보다 더 부드러운 톤 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* 제목 스타일 */
+  h2 {
+    color: rgb(109, 12, 148);
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* 입력 그룹 스타일 */
+  .form-group {
+    border: 3px solid #211C84;
+    border-radius: 15px;
+    padding: 20px 40px;
+    background-color: #B5A8D5;
+    width: fit-content;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 입력 필드 간 간격 */
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  }
+  
+  /* 라벨 스타일 */
+  label {
+    font-weight: bold;
+    color: #211C84;
+    font-size: 16px;
+  }
+  
+  /* 입력 필드 & 드롭다운 공통 스타일 */
+  input, select {
+    width: 220px;
+    padding: 10px;
+    border: 2px solid #211C84;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* 입력 필드 & 드롭다운 포커스 효과 */
+  input:focus, select:focus {
+    outline: none;
+    border-color: #6a0dad; /* 포커스 시 보라색 테두리 */
+    box-shadow: 0 0 5px rgba(109, 12, 148, 0.5);
+  }
+  
+  /* 결과 메시지 스타일 */
+  #result {
+    border: 3px solid #211C84;
+    border-radius: 8px;
+    text-align: center;
+    background-color: lightcoral;
+    font-style: italic;
+    font-weight: bold;
+    padding: 12px 60px;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 반응형 스타일 (작은 화면에서도 잘 보이게) */
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .form-group {
+      padding: 15px 25px;
+    }
+    
+    input, select {
+      width: 180px;
+      font-size: 14px;
+    }
+  
+    #result {
+      font-size: 16px;
+      padding: 10px 30px;
+    }
+  }
