@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Mini Game</h1>
+    <h3>⚙️Setting⚙️</h3>
+
+    <p>How many players?</p>
+    <select id="playerCount" onchange="showNameInputs()">
+      <option value="1">1명</option>
+      <option value="2">2명</option>
+      <option value="3">3명</option>
+      <option value="4">4명</option>
+    </select>
+
+    <!-- 이름 입력창이 자동 생성될 부분 -->
+    <div id="nameInputs"></div>
+    
+    <p>How many want time?</p>
+    <select id="gameCount">
+      <option>1게임</option>
+      <option>3게임</option>
+      <option>5게임</option>
+      <option>7게임</option>
+      <option>10게임</option>
+    </select>
+  <br>
+    <div class="containButton">
+      <button onclick="startGame()">게임 시작</button>
+    </div>
+
+    <script>
+    function showNameInputs() {
+      const playerCount = document.getElementById("playerCount").value;
+      const nameInputsDiv = document.getElementById("nameInputs");
+      nameInputsDiv.innerHTML = '';  // 기존 입력란 초기화
+
+      for (let i = 0; i < playerCount; i++) {
+        const playerInput = document.createElement('input');
+        playerInput.id = `playerName${i}`;
+        playerInput.placeholder = `Player ${i + 1} Name`;
+        nameInputsDiv.appendChild(playerInput);
+        nameInputsDiv.appendChild(document.createElement('br'));
+      }
+    }
+
+    function startGame() {
+  const totalPlayers = parseInt(document.getElementById("playerCount").value);  // 숫자로 변환
+  const gamesPerPlayer = parseInt(document.getElementById("gameCount").value);  // 숫자로 변환
+
+  let players = [];
+  for (let i = 0; i < totalPlayers; i++) {
+    const nameInput = document.getElementById(`playerName${i}`);
+    const name = nameInput && nameInput.value.trim() !== "" ? nameInput.value.trim() : `Player ${i + 1}`;
+    players.push({ name, ovrScores: [], totalOVR: 0 });
+  }
+
+  // LocalStorage에 게임 데이터 저장
+  localStorage.setItem("players", JSON.stringify(players));
+  localStorage.setItem("gamesPerPlayer", gamesPerPlayer);
+  localStorage.setItem("currentPlayerIndex", 0);  // 게임 시작 시 0번째 플레이어부터
+  localStorage.setItem("totalPlayers", totalPlayers);
+
+  // game.html로 이동
+  window.location.href = "game.html";
+}
+  </script>
+</body>
+</html>

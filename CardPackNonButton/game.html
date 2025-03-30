@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 진행</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Mini Game Start</h1>
+    <h2>카드팩을 눌러주세요</h2>
+
+   <div id="gameArea" style="display: none;">
+        <h2 id="currentPlayer">Player's Turn</h2>
+
+        <!-- 카드 이미지 -->
+        <div class="image-container">
+          <img id="firstCard" class="firstCard" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtTEgit69CLM0EzgmkkxxDZ8UE7vbfpG9HTw&s" alt="Player Card">
+        </div>
+        
+        <!-- OVR 표시 -->
+        <p id="playerOVR"></p>
+
+        <!-- 다음 턴 버튼 -->
+       <button id="nextTurnBtn" style="display:none;" 
+       onclick="nextTurn()">다음 Player</button>
+        
+        <!-- 결과 확인 버튼 -->
+        <button id="showResultBtn" style="display: none;" onclick="determineWinner()">결과보러가기</button>
+
+        <!-- 게임 결과 -->
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <!-- 뒤로 가기 버튼 -->
+    <button onclick="goBack()">뒤로가기</button>
+
+    <script src="game.js"></script>
+</body>
+</html>
