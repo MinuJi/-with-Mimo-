@@ -1,0 +1,174 @@
+/* 전체 body 가운데 정렬 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', sans-serif;
+    background: linear-gradient(to bottom, #f0fbff, #d2eaff); /* 💠 더 밝은 파스텔 하늘 */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* 게임 박스 정렬 */
+  .game-container {
+    text-align: center;
+  }
+  
+  /* 제목 스타일 */
+  .game-container h1 {
+    font-size: 1.5rem;
+    color: #03426e;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #b3e5fc;
+    letter-spacing: 1px;
+  }
+  
+  .game-container h3 {
+    font-size: 1rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  
+  /* 공통 텍스트 */
+  .game-container p {
+    font-size: 0.85rem;
+    color: #2c3e50;
+    margin: 10px 0;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  
+  /* 마지막 안내 문구 */
+  .game-container p:last-of-type {
+    font-size: 0.75rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 8px;
+  }
+  
+  /* 이미지 공통 스타일 */
+  #startImage,
+  #gameImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #3498db;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 결과 텍스트 */
+  #result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1c3e50;
+    margin-top: 20px;
+    background-color: #e8f4ff;
+    padding: 15px;
+    border: 2px dashed #3498db;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 #a5c7e8;
+  }
+  
+  /* 셀렉트 박스 */
+  select#chanceCount {
+    width: 200px;
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 2px solid #5aa9e6;
+    border-radius: 10px;
+    background-color: #f0fbff;
+    color: #2c3e50;
+    box-shadow: 2px 2px 0 #8fc4eb;
+    transition: 0.2s;
+  }
+  
+  select#chanceCount:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 2px 2px 0 #3498db;
+  }
+  
+  /* 숫자 입력창 */
+  input#guess {
+    width: 180px;
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 2px solid #5aa9e6;
+    border-radius: 10px;
+    background-color: #f9fdff;
+    color: #2c3e50;
+    box-shadow: 2px 2px 0 #8fc4eb;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  input#guess:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 2px 2px 0 #3498db;
+  }
+  
+  /* 버튼: 확인 */
+  .game-button {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    border: solid 5px rgb(37, 36, 36);
+    margin: 10px 5px;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #444;
+    transition: transform 0.1s ease;
+  }
+  
+  .game-button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 #222;
+  }
+  
+  /* 버튼: 다시하기 */
+  .reset-button {
+    width: 100px;
+    height: 42px;
+    background-color: #aee4ff;
+    color: #2c3e50;
+    font-weight: bold;
+    border: 2.5px solid #5aa9e6;
+    border-radius: 14px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #8fc4eb;
+    margin: 10px 5px;
+    transition: all 0.15s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #d4f1ff;
+    box-shadow: 2px 2px 0 #7fbde0;
+  }
+  
+  .reset-button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 #5aa9e6;
+  }
+  
+  /* 이미지 흔들림 애니메이션 */
+  @keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.4s ease;
+  }
+  

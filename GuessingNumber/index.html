@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>숫자 맞추기 게임</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <img id="startImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz2iCAkKI4jn5mVUT8gIoYZEMPLHlo9V1zqw&s" alt="스티치" />
+    <h1>숫자 맞추기 게임</h1>
+    <h3>1부터 100 사이의 숫자를 맞춰보세요!</h3>
+
+    <p>기회를 선택하세요:</p>
+    <select id="chanceCount" onchange="startGame()">
+      <option value="">-- 선택하세요 --</option>
+      <option value="5">5회</option>
+      <option value="10">10회</option>
+      <option value="15">15회</option>
+    </select>
+
+    <p id="chanceDisplay">기회를 선택해주세요</p>
+
+    <input type="number" id="guess" placeholder="숫자를 입력하세요" /> <br>
+    <p>버튼을 누르세요!</p>
+    <button class="game-button" onclick="checkGuess()"></button>
+
+    <p id="result"></p>
+
+    <button class="reset-button" onclick="resetGame()">다시하기</button> 
+
+       <div class="header-image"> <br>
+      <img id="gameImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlGqqykSj6qAgs7kNUpQG7K2C1cyw1pa8ujA&s" alt="스티치" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
