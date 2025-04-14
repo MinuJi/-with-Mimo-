@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const screenContent = document.getElementById("screen-content");
-    const screenText = document.getElementById("screen-text");
-    const nextBtn = document.getElementById("next-btn");
-    const btnOn = document.getElementById("power-on");
-    const btnOff = document.getElementById("power-off");
-  
-    // ✅ Turn ON
-    btnOn.addEventListener("click", () => {
-      screenContent.style.backgroundColor = "#fff";
-      screenContent.style.color = "#000";
-      screenText.innerText = "안녕하세요!";
-      nextBtn.style.display = "block";
-    });
-  
-    // ✅ Turn OFF → 초기 상태로 리셋
-    btnOff.addEventListener("click", () => {
-      screenContent.style.backgroundColor = "#000";
-      screenContent.style.color = "#0f0";
-      screenText.innerText = "";
-      nextBtn.style.display = "none";
-    });
-  
-    // ✅ 다음 클릭 시 → 게임 리스트 화면으로 전환
+  const screenContent = document.getElementById("screen-content");
+  const screenText = document.getElementById("screen-text");
+  const nextBtn = document.getElementById("next-btn");
+  const btnOn = document.getElementById("power-on");
+  const btnOff = document.getElementById("power-off");
+
+  // ✅ Turn ON
+  btnOn.addEventListener("click", () => {
+    screenContent.style.backgroundColor = "#fff";
+    screenContent.style.color = "#000";
+    screenText.innerText = "안녕하세요!";
+    nextBtn.style.display = "block";
+  });
+
+  // ✅ Turn OFF → 초기 상태로 리셋
+  btnOff.addEventListener("click", () => {
+    screenContent.style.backgroundColor = "#000";
+    screenContent.style.color = "#0f0";
+    screenText.innerText = "";
+    nextBtn.style.display = "none";
+  });
+
+  // ✅ 다음 클릭 시 → 게임 리스트 화면으로 전환
   nextBtn.addEventListener("click", () => {
     screenContent.style.backgroundColor = "#eef";
     screenContent.style.color = "#111";
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           color: #222;
           text-shadow: 1px 1px #ccc;
         ">🎮 Game List</h2>
-  
+
         <ul style="
           list-style: none;
           padding: 0;
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
               padding: 10px 20px;
               border-radius: 8px;
               display: inline-block;
-              transition: background 0.2s;
             ">🧠🔢 Guess Number</a>
           </li>
           <li>
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
               padding: 10px 20px;
               border-radius: 8px;
               display: inline-block;
-              transition: background 0.2s;
             ">🃏 Card Game</a>
           </li>
           <li>
@@ -75,15 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
               padding: 10px 20px;
               border-radius: 8px;
               display: inline-block;
-              transition: background 0.2s;
             ">💪 Dad and Son</a>
           </li>
-          </ul>
-        </div>
-      `;
-      nextBtn.style.display = "none";
-    });
+        </ul>
+      </div>
+    `;
+    nextBtn.style.display = "none";
   });
-  
+});
+
+
+
   
   
