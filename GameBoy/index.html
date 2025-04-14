@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game boy</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+<body>
+  <div class="GameboyFrame">
+  <div class="tool">
+    <div class="LeftSide">
+      <img id="blue" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVWwllH6cDGVi3wHmUWcNC7s4ZXIsiYP7oQ&s" />
+      <button class="up">↑</button>
+      <button class="down">↓</button>
+      <button class="left">←</button>
+      <button class="right">→</button>
+    </div>
+
+      <!-- 게임 화면 -->
+      <div class="GameScreen">
+        <div class="screen-border">
+          <div class="screen-content" id="screen-content">
+            <p id="screen-text"></p>
+            <button id="next-btn" style="display: none;">다음</button>
+          </div>
+        </div>
+      </div>
+
+    <div class="RightSide">
+      <img id="red" src="https://png.pngtree.com/thumb_back/fh260/background/20231031/pngtree-dynamic-red-triangular-low-poly-abstract-background-image_13760781.png" />
+      <button class="x">X</button>
+      <button class="y">Y</button>
+      <button class="b">B</button>
+      <button class="a">A</button>
+    </div>
+  </div>
+  </div> 
+
+  <div class="PowerControls">
+  <button id="power-on">Turn On</button>
+  <button id="power-off">Turn Off</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

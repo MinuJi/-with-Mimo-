@@ -1,0 +1,175 @@
+/* 기본 레이아웃 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e0e0e0, #cfcfcf);
+    display: flex;
+    flex-direction: column;     /* ✅ 세로 정렬로 변경 */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;                  /* ✅ 게임기와 버튼 사이 간격 */
+  }
+  
+  /* 🎮 전체 게임기 테두리 프레임 */
+  .GameboyFrame {
+    background-color: #8e44ad; /* 진한 보라색 (원하는 보라로 바꿔도 됨) */
+    border: 6px solid #888;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+  }
+  
+  /* 🔄 안의 내용 정렬 */
+  .tool {
+    display: flex;
+    align-items: center;
+    gap: 0; /* 요소 간 완전 붙이기 */
+  }
+  
+  /* 🔵 왼쪽 / 🔴 오른쪽 컨트롤러 */
+  .LeftSide,
+  .RightSide {
+    position: relative;
+    width: 250px;
+    height: 350px;
+  }
+  
+  /* 중앙 스크린 */
+  .GameScreen {
+    width: 500px; /* 👉 더 넓게! */
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* 테두리 느낌 */
+  .screen-border {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #222, #111);
+    border-radius: 16px;
+    box-shadow: inset 0 0 20px #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 화면 안쪽 내용 */
+  .screen-content {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column; /* ✅ 세로 정렬 */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #screen-text {
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  /* 공통 이미지 */
+  #blue, #red {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+  
+    /* 💡 디자인 추가 */
+    border-radius: 16px; /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* 그림자 */
+    opacity: 0.95; /* 약간의 투명도 */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* 부드러운 테두리 */
+    backdrop-filter: blur(2px); /* 유리 느낌 (지원되는 브라우저에서) */
+  }
+  
+  /* 공통 버튼 스타일 */
+  .LeftSide button,
+  .RightSide button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border: 3px solid #444444; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .LeftSide button:hover,
+  .RightSide button:hover {
+    border-color: #666666;
+  }
+  
+  
+  /* 🔵 방향 버튼 위치 (중심 기준) */
+  .up    { top: 100px; left: 125px; }
+  .down  { top: 250px; left: 125px; }
+  .left  { top: 175px; left: 55px;  }
+  .right { top: 175px; left: 195px; }
+  
+  
+  /* 🔴 ABXY 버튼 위치 */
+  .x { top: 100px; left: 125px; }
+  .y { top: 175px; left: 55px;  }
+  .a { top: 175px; left: 195px; }
+  .b { top: 250px; left: 125px; }
+  
+  
+  .PowerControls {
+    text-align: center;
+  }
+  
+  .PowerControls button {
+    padding: 16px 32px;          /* ⬆️ 패딩 증가 */
+    font-size: 22px;             /* ⬆️ 글자 크기 증가 */
+    margin: 0 12px;
+    border: none;
+    border-radius: 12px;         /* ⬆️ 더 둥글게 */
+    background-color: #6c5ce7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  .PowerControls button:hover {
+    background-color: #a29bfe;
+  }
+  
+  #next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: monospace;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+  
+  
+  
+  
